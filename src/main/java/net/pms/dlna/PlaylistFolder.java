@@ -92,7 +92,7 @@ public class PlaylistFolder extends DLNAResource {
 		boolean m3u = false;
 		boolean pls = false;
 		
-		// START - Add lines to deal with UTF-8 encoded m3u8 playlist files
+		// START - Deal with UTF-8 encoded m3u8 playlist files
 		
 		//try (BufferedReader br = getBufferedReader()) {
 		try {
@@ -105,6 +105,7 @@ public class PlaylistFolder extends DLNAResource {
 			} else {
 					br = new BufferedReader(new FileReader(playlistfile));
 			}
+		
 			// END
 			
 			String line;
